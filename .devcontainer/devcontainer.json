@@ -1,0 +1,39 @@
+{
+  "name": "azpy",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind,consistency=cached",
+  "forwardPorts": [
+    // Azurite ports (enable access from Azure Storage Explorer)
+    10000,
+    10001,
+    10002
+  ],
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {},
+    "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
+      "jqVersion": "latest",
+      "yqVersion": "4",
+      "gojqVersion": "none",
+      "xqVersion": "none",
+      "jaqVersion": "none"
+    },
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-azurestorage",
+        "Azurite.azurite"
+      ]
+    }
+  },
+  "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/postCreateCommand.sh",
+}
