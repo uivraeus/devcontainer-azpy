@@ -8,4 +8,5 @@ cat ${SCRIPT_DIR}/bashrc_append >> ~/.bashrc
 
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-  bat
+  bat \
+  sqlite3
