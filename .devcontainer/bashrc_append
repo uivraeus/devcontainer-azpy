@@ -16,3 +16,6 @@ alias l='ls -CF'
 # Nice json/yaml support
 alias jless='jq -C | less -ri'
 alias yless='yq -C | less -ri'
+
+# Misc
+alias bat=batcat
