@@ -31,7 +31,9 @@
         "ms-python.python",
         "ms-toolsai.jupyter",
         "ms-azuretools.vscode-azurestorage",
-        "Azurite.azurite"
+        "Azurite.azurite",
+        "alexcvzz.vscode-sqlite",
+        "mongodb.mongodb-vscode"
       ]
     }
   },
