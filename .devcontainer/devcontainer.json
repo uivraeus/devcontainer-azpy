@@ -22,18 +22,20 @@
       "xqVersion": "none",
       "jaqVersion": "none"
     },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "enableNonRootDocker": "true",
+      "moby": "false"
+    },
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "streetsidesoftware.code-spell-checker",
-        "ms-azuretools.vscode-azurefunctions",
         "ms-python.python",
         "ms-toolsai.jupyter",
-        "ms-azuretools.vscode-azurestorage",
-        "Azurite.azurite",
-        "alexcvzz.vscode-sqlite",
-        "mongodb.mongodb-vscode"
+        "ckolkman.vscode-postgres",
+        "ms-vscode.vscode-node-azure-pack",
+        "ms-mssql.mssql"
       ]
     }
   },
