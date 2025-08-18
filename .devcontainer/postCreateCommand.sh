@@ -10,7 +10,8 @@ sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install -y \
   bat \
   sqlite3 \
-  postgresql-common
+  postgresql-common \
+  azure-functions-core-tools-4 # work-around for disabled "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1" feature (see devcontainer.json)
 
 # Matching PG CLI for local DB installation
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \

@@ -3,8 +3,7 @@
 # Started with "official guide"
 # 👉 https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver16&tabs=debian18-install%2Calpine17-install%2Cdebian8-install%2Credhat7-13-install%2Crhel7-offline#tabpanel_1_debian18-install
 #
-# The stripped away most parts as:
-# - MS repo already configured in dev-container base
+# The stripped away some parts as:
 # - Not interested in "optional" parts
 #
 # Confirm successful install:
@@ -23,11 +22,11 @@ then
 fi
 
 # # Download the package to configure the Microsoft repo
-# curl -sSL -O https://packages.microsoft.com/config/debian/$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)/packages-microsoft-prod.deb
-# # Install the package
-# sudo dpkg -i packages-microsoft-prod.deb
-# # Delete the file
-# rm packages-microsoft-prod.deb
+curl -sSL -O https://packages.microsoft.com/config/debian/$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)/packages-microsoft-prod.deb
+# Install the package
+sudo dpkg -i packages-microsoft-prod.deb
+# Delete the file
+rm packages-microsoft-prod.deb
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18

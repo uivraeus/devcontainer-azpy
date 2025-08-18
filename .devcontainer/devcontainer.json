@@ -14,7 +14,7 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/azure-cli:1": {},
-    "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {},
+    //"ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {}, // timeout-problems (wsl2 docker/network issue?) -> apt install via postCreateCommand.sh instead
     "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
       "jqVersion": "latest",
       "yqVersion": "4",
@@ -31,6 +31,8 @@
     "vscode": {
       "extensions": [
         "streetsidesoftware.code-spell-checker",
+        "ms-python.mypy-type-checker",
+        "ms-python.vscode-pylance",
         "ms-python.python",
         "ms-toolsai.jupyter",
         "ckolkman.vscode-postgres",
