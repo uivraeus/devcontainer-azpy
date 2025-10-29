@@ -14,6 +14,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/debian/$(lsb_r
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install -y \
   bat \
+  git-lfs \
   sqlite3 \
   postgresql-common \
   azure-functions-core-tools-4 # work-around for disabled "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1" feature (see devcontainer.json)
