@@ -26,6 +26,7 @@
       "enableNonRootDocker": "true",
       "moby": "false"
     },
+    "ghcr.io/devcontainers/features/node:1": {},
   },
   "customizations": {
     "vscode": {
