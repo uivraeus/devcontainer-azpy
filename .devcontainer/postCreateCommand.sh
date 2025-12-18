@@ -29,4 +29,15 @@ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
 $SCRIPT_DIR/installOdbcDriver.sh
 sudo ACCEPT_EULA=Y apt-get install -y mssql-tools18
 
+# ngrok
+# https://ngrok.com/docs/getting-started#1-install-the-ngrok-agent-cli
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
+  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+  | sudo tee /etc/apt/sources.list.d/ngrok.list \
+  && sudo apt update \
+  && sudo apt install ngrok
 
+# uv
+pip install uv
+# see also env config i bashrc
